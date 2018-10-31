@@ -20,15 +20,14 @@
 % Identificadores do trabalho
 % Usados para preencher os elementos pré-textuais
 %----------------------------------------------------------------------
-\titulo{Limitações das Técnicas de Geração Automática de Programas de Teste para a
-Verificação de Memória Compartilhada em Multi-cores}
-\autor{João Paulo Taylor Ienczak Zanette}
+\titulo{Seleção automática de atributos sísmicos para classificação de fácies por redes de Kohonen}
+\autor{Arthur Bridi Guazzelli}
 \data{\today}
 \instituicao{Universidade Federal de Santa Catarina}
 \local{Florianópolis}
-\tipotrabalho{Trabalho de Conclus\~{a}o de Curso}
-\orientador{Prof. Dr. Luiz Claudio Villar dos Santos}
-\programa{Curso de Bacharelado em Ciências da Com\-pu\-ta\-ção}
+\tipotrabalho{Trabalho de Conclusão de Curso}
+\orientador{Mauro Roisenberg}
+\programa{Curso de Bacharelado em Ciências da Computação}
 \centro{Departamento de Informática e Estatística}
 
 \def\bancaMembroA{\todo{A definir}}
@@ -41,8 +40,6 @@ Verificação de Memória Compartilhada em Multi-cores}
            Ciências da Computação para a obtenção do Grau de Bacharel
            em Ciências da Computação.}
 \assuntos{Ciências da Computação,Modelos,Teses,OpenSource,LaTeX}
-
-\assuntos{EDA, verificação, pré-silício, memória compartilhada, multicore, coerência de cache}
 
 \renewcommand{\imprimircapa}{%
     \begin{capa}%
@@ -95,7 +92,7 @@ Verificação de Memória Compartilhada em Multi-cores}
         \textbf{Acadêmico} &  \imprimirautor \\ \hline
         \textbf{Título do trabalho} & \imprimirtitulo \\ \hline
         \textbf{Curso} & Ciências da Computação/INE/UFSC \\ \hline
-        \textbf{Área de Concentração} &  \textit{Hardware} \\ \hline
+        \textbf{Área de Concentração} &  Inteligência Artificial \\ \hline
     \end{tabular}
 }
 
@@ -119,19 +116,19 @@ Verificação de Memória Compartilhada em Multi-cores}
         \hline
         \shadecell & \multicolumn{4}{c|}{\shadecell \textbf{Aprovado}} & \shadecell \\ \hhline{*{1}{>{\arrayrulecolor{shadecolor}}-}*{4}{>{\arrayrulecolor{black}}|-}>{\arrayrulecolor{shadecolor}}|->{\arrayrulecolor{black}}}
         \multirow{-1}{*}{\shadecell \textbf{Critérios}} & \shadecell\textbf{Sim} &  \shadecell\textbf{Parcial} & \shadecell\textbf{Não} & \shadecell\textbf{Não se aplica} & \multirow{-1}{*}{\shadecell \textbf{Observação}} \\ \hline
-        1.O trabalho é adequado para um TCC no CCO/SIN (relevância/abrangência)? & \shadecell  & \shadecell & \shadecell  & \shadecell  & \\ \hline
-        2.O título do trabalho é adequado? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        3.O tema de pesquisa está claramente descrito? & \shadecell & \shadecell & \shadecell  & \shadecell & \\ \hline
-        4.O problema/hipóteses de pesquisa do trabalho está claramente identificado? & \shadecell  & \shadecell  & \shadecell & \shadecell & \\ \hline
-        5.A relevância da pesquisa é justificada? & \shadecell & \shadecell & \shadecell  & \shadecell & \\ \hline
-        6.Os objetivos descrevem completa e claramente o que se pretende alcançar neste trabalho? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        7.É definido o método a ser adotado no trabalho? O método condiz com os objetivos e é adequado para um TCC? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        8.Foi definido um cronograma coerente com o método definido (indicando todas as atividades) e com as datas das entregas (p.ex.Projeto I, II, Defesa)? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        9.Foram identificados custos relativos à execução deste trabalho (se houver)? Haverá financiamento para estes custos? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        10.Foram identificados todos os envolvidos neste trabalho? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
-        11.As formas de comunicação foram definidas (ex: horários para orientação)? & \shadecell  & \shadecell & \shadecell & \shadecell & \\ \hline
-        12.Riscos potenciais que podem causar desvios do plano foram identificados? & \shadecell  & \shadecell & \shadecell & \shadecell & \\ \hline
-        13.Caso o TCC envolva a produção de um software ou outro tipo de produto e seja desenvolvido também como uma atividade  realizada numa empresa ou laboratório, consta da proposta uma declaração (\anexoname\ \ref{decl-concor}) de ciência e concordância com a entrega do código fonte e/ou documentação produzidos? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        1. O trabalho é adequado para um TCC no CCO/SIN (relevância/abrangência)? & \shadecell  & \shadecell & \shadecell  & \shadecell  & \\ \hline
+        2. O título do trabalho é adequado? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        3. O tema de pesquisa está claramente descrito? & \shadecell & \shadecell & \shadecell  & \shadecell & \\ \hline
+        4. O problema/hipóteses de pesquisa do trabalho está claramente identificado? & \shadecell  & \shadecell  & \shadecell & \shadecell & \\ \hline
+        5. A relevância da pesquisa é justificada? & \shadecell & \shadecell & \shadecell  & \shadecell & \\ \hline
+        6. Os objetivos descrevem completa e claramente o que se pretende alcançar neste trabalho? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        7. É definido o método a ser adotado no trabalho? O método condiz com os objetivos e é adequado para um TCC? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        8. Foi definido um cronograma coerente com o método definido (indicando todas as atividades) e com as datas das entregas (p.ex.Projeto I, II, Defesa)? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        9. Foram identificados custos relativos à execução deste trabalho (se houver)? Haverá financiamento para estes custos? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        10. Foram identificados todos os envolvidos neste trabalho? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
+        11. As formas de comunicação foram definidas (ex: horários para orientação)? & \shadecell  & \shadecell & \shadecell & \shadecell & \\ \hline
+        12. Riscos potenciais que podem causar desvios do plano foram identificados? & \shadecell  & \shadecell & \shadecell & \shadecell & \\ \hline
+        13. Caso o TCC envolva a produção de um software ou outro tipo de produto e seja desenvolvido também como uma atividade  realizada numa empresa ou laboratório, consta da proposta uma declaração (\anexoname\ \ref{decl-concor}) de ciência e concordância com a entrega do código fonte e/ou documentação produzidos? & \shadecell & \shadecell & \shadecell & \shadecell & \\ \hline
     \end{tabular}
 }
 
@@ -153,22 +150,7 @@ Verificação de Memória Compartilhada em Multi-cores}
 
 %--------------------------------------------------------------------------
 \begin{resumo}
-    \small
-    Multiprocessadores em chip demandam o uso de protocolos para assegurar a
-    consistência de memória compartilhada e a coerência de cache, os quais são
-    implementados via hardware. A crescente complexidade dessas implementações
-    torna o projeto de sistemas de memória suscetível a erros. Para endereçar
-    esse problema, técnicas de verificação pré-silício têm sido estudadas no
-    meio acadêmico. Por serem executadas em simuladores de uma plataforma real,
-    essas técnicas não viabilizam a execução de testes demasiado extensos.
-    Pensando nisso, algumas abordagens de geração adaptativa foram propostas,
-    procurando maximizar a cobertura funcional dos testes sem aumentar a
-    extensão dos mesmos. Neste trabalho é proposta a elaboração de uma nova
-    técnica de geração automática de testes adaptativos. A técnica será
-    concebida a fim de aumentar a eficácia em se expor erros de projeto no
-    subsistema de memória compartilhada, em especial erros de coerência, e
-    manter-se independente da organização da memória, permitindo o reuso em
-    diversos sistemas.
+    % TODO: Resumo
 
     \vspace{\onelineskip}
     \noindent
@@ -183,117 +165,22 @@ Verificação de Memória Compartilhada em Multi-cores}
 
 %--------------------------------------------------------------------------
 \chapter{Introdução}
+A caracterização de reservatórios de petróleo e gás se beneficiou de avanços tecnológicos como a sísmica 3D e atributos sísmicos, que fornecem informações qualitativas da geometria e dos parâmetros físicos da subsuperfície  \cite{Sancevero:2007}. Essas tecnologias deram origem  ao desafio de análise dessa grande quantidade de dados disponíveis aos intérpretes. 
 
-Depois de ter provocado uma mudança radical na forma de se projetar
-microprocessadores para PCs e servidores, o multi-processamento em
-\textit{chip} ou \textit{Chip Multi-Processing (CMP)} levou ao atual quadro
-onde \textit{chips} com 8 ou mais \textit{cores} são bastante comuns. Prevê-se
-o uso de \textit{chips} com dezenas a centenas cores e a sobrevida da abstração
-de memória compartilhada como condição para viabilizar a programação de
-propósitos gerais \cite{Devadas:2013}. Isso resulta no desafio de como manter
-coerência de memória compartilhada \textbf{quando se aumenta a escala do número
-de cores em um único \textit{chip}}. Para suprir a abstração de memória
-compartilhada coerente, o subsistema de memória torna-se mais sofisticado e,
-portanto, mais suscetível a erros de projeto com o aumento massivo do número de
-\textit{cores}. Além disso, como se espera que grande parte dos programas
-paralelos utilize bibliotecas para sincronização, a maioria dos programadores
-não precisa se preocupar com as regras de consistência \cite{Adve:1996} do
-modelo de memória \cite{Hennessy:2011}, o que tende a popularizar o uso de
-\textbf{modelos com máxima relaxação da ordem de programa} para aumentar o
-desempenho sem comprometer a programabilidade.  Isso também contribui para
-aumentar a complexidade do hardware.
+No processo de análise de fácies sísmicas, a abordagem não supervisionada utiliza atributos sísmicos como entrada de um algoritmo de clusterização. Nesse contexto, o algoritmo de redes de Kohonen, ou \textit{Self Organizing Maps}, (SOM) teve melhores resultados \cite{Coleou:2003} e atualmente é utilizado em \textit{softwares} comerciais. Entretanto, resultados úteis dependem mais dos atributos selecionados do que o método de clusterização utilizado \cite{Barnes:2002}. A seleção de um bom conjunto de atributos dentre a centenas disponíveis representa um problema em questão de tamanho e dimensionalidade dos dados. Além disso, nem todo atributo é relevante para a análise e muitos deles contém informações redundantes \cite{Barnes:2007}.
 
-Portanto, a dificuldade de se validar sistemas computacionais baseados em CMP
-tende a aumentar dramaticamente a cada nova geração de produtos a serem
-lançados. Ora, \textbf{a validação da coerência e da consistência do subsistema
-de memória compartilhada}, o qual inclui múltiplos níveis de cache e protocolos
-complexos, constitui grande parte do esforço de se validar um sistema
-computacional baseado em CMP \cite{Wagner:2008}. Como o número de estados
-induzidos por um protocolo de coerência cresce exponencialmente com o aumento
-do número de cores \cite{Shim:2013}, torna-se bastante desafiador o problema de
-verificar se o projeto de um chip baseado em múltiplos \textit{cores} em larga
-escala implementa corretamente o comportamento esperado para o subsistema de
-memória compartilhada.
-
-As primeiras técnicas de validação do sistema de memória foram propostas para
-serem aplicadas após a fabricação (\textbf{teste} pós-silício), através da
-execução de longos programas de testes aleatórios no próprio hardware do
-protótipo.  Infelizmente, o simples reuso dessas técnicas é inadequado em tempo
-de projeto (para \textbf{verificação} pré-silício), porque seriam
-demasiadamente lentas quando os programas de teste são executados em
-simuladores, o que requer a limitação do tamanho do teste, o que restringe a
-qualidade da verificação. Por isso, as técnicas de verificação tem se mostrado
-frequentemente incapazes de encontrar erros sutis de projeto, que acabam
-passando para o hardware.
+Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar automaticamente um subconjunto de atributos sísmicos relevantes para a classificação de fácies sísmicas. No contexto de previsão de \textit{logs} de poços, que possui o mesmo desafio de seleção de atributos, uma abordagem utilizando algoritmos genéticos e redes neurais apresentou bons resultados \cite{Dorrington:2004}. 
 
 %--------------------------------------------------------------------------
 \chapter{Objetivos}
 
 \section{Objetivo Geral}
-O objetivo geral desta proposta é o estudo de técnicas de geração
-de testes mais eficientes e eficazes, a serem aplicadas em tempo de projeto,
-para solucionar o problema de verificação de consistência e coerência de
-memória compartilhada em sistemas computacionais baseados em CMP.
-
-% O primeiro objetivo específico desta proposta é o de investigar as principais
-% limitações das técnicas reportadas na literatura, a fim de identificar
-% oportunidades de contribuição científica.
-
-% O segundo objetivo específico é a implementação de um protótipo de gerador de
-% testes dirigidos reportado na literatura (e.g. [WAG 08] [ELV 16].) e sua
-% comparação com um gerador convencional de testes aleatórios e com um gerador de
-% testes aleatórios [RAM 11] sob fortes restrições [AND 16a].
 
 \section{Objetivos Específicos}
-\begin{itemize}
-    \item \textbf{Analisar técnicas existentes:} investigar as principais
-        limitações das técnicas reportadas na literatura, a fim de identificar
-        oportunidades de contribuição científica.
-    \item \textbf{Implementar um gerador de testes dirigidos:} tomar como base um
-        gerador reportado na literatura (e.g. \cite{Wagner:2008},
-        \cite{Elver:2016}).
-    \item \textbf{Comparar com outros geradores:} comparar o gerador implementado
-        com um convencional de testes aleatórios \cite{Rambo:2011} e com um de
-        testes aleatórios sob fortes restrições \cite{Andrade:2016a}.
-\end{itemize}
+
 
 %--------------------------------------------------------------------------
-\section{Método de Pesquisa}
-
-O método a ser adotado consiste na realização de experimentos sobre uma
-\textbf{representação de projeto do sistema sob verificação}, ou seja, na
-execução de testes através da simulação daquela representação, utilizando como
-infraestrutura um \textbf{simulador} de domínio público denominado gem5
-\cite{Gem5:2012}. A representação de projeto utilizada para o subsistema de
-memória corresponde ao módulo \textit{Ruby} daquele simulador, a qual permite a
-descrição das máquinas de estado dos protocolos de coerência.
-
-Para desempenhar o papel de \textbf{verificador} da correção funcional do
-subsistema de memória representado, será utilizada uma técnica de análise
-automática dos eventos registrados durante a simulação, a qual foi desenvolvida
-localmente \cite{Freitas:2013} e cujo código está portanto disponível para uso
-no laboratório hospedeiro.
-
-O protótipo de gerador de testes dirigidos será implementado com base na
-descrição de seu algoritmo conforme descrito na literatura. Será escolhido o
-gerador cuja descrição for mais completa e leve à melhor reprodutibilidade.
-
-Como representante das técnicas de geração convencional de testes aleatórios
-será utilizado o gerador denominado PLAIN \cite{Rambo:2011}. Como representante
-das técnicas de geração convencional de testes aleatórios sob fortes restrições
-será utilizado o gerador denominado CHAIN \cite{Andrade:2016a}. Os códigos dos
-dois geradores estão disponíveis para uso no laboratório hospedeiro.
-
-Os três geradores serão comparados ao se usar a mesma representação de projeto,
-o mesmo simulador e o mesmo verificador acima mencionados.
-
-Para a simulação de erros de projeto, serão utilizados como base os cinco erros
-artificiais descritos em \cite{Andrade:2016b}, mas novos erros artificiais
-serão desenvolvidos como parte do trabalho proposto para aumentar a abrangência
-da comparação.
-
-Para a comparação serão adotadas as seguintes métricas: cobertura funcional,
-esforço computacional e probabilidade de detecção de erros.
+\chapter{Método de Pesquisa}
 
 %--------------------------------------------------------------------------
 \chapter{Cronograma}
@@ -303,123 +190,107 @@ esforço computacional e probabilidade de detecção de erros.
     \rowcolors{0}{shadecolor}{shadecolor}
     \begin{tabular}{|X p{3cm}|c|c|c|c|c|c|c|c|c|c|c|c|}
         \hline
-            \multirow{-1}{*}{Etapas} &
+            \multirow{-1}{*}{\textbf{Etapas}} &
     
-            \multicolumn{12}{|c|}{Meses} \\ \hhline{|~|*{12}{-|}}
-            
-            % [construir um cronograma de dois semestres alocando um total de
-            
-            % - três mêses:
-            %       atividades de 1 a 5 (superpostas);
-            
-            % - um mês:
-            %       atividade 6 (sem sobreposição com nenhuma outra)
-            
-            % - 6 meses:
-            %       atividade 7 (sem sobreposição com nenhuma outra)
-            
-            % - um mês:
-            %       atividades de 8 a 11 (superpostas)]
-    
-            & jul. & ago. & set. & out. & nov. & dez. & jan. & fev. & mar. & abr. & mai. & jun. \\ \hline
-            \hiderowcolors Estudo dos modelos de consistência de memória
-            & x    &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Estudo de um protocolo de coerência (MESI)
-            & x    & x    &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Estudo de geradores de testes aleatórios e testes dirigidos
-            & x    & x    & x    &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Familiarização com o simulador (gem5)
-            &      & x    & x    &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Familiarização com a representação de memória (Ruby)
-            &      &      & x    &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Criação e caracterização de novos erros artificiais de projeto
-            &      &      &      & x    &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Implementação do protótipo do gerador de testes dirigidos
-            &      &      &      &      & x    & x    & x    & x    & x    & x    &      &      \\ \hline
-            \hiderowcolors Execução de testes produzidos com o gerador implementado
-            &      &      &      &      &      &      &      &      &      &      & x    &      \\ \hline
-            \hiderowcolors Execução de testes produzidos com o gerador PLAIN
-            &      &      &      &      &      &      &      &      &      &      & x    &      \\ \hline
-            \hiderowcolors Execução de testes produzidos com o gerador CHAIN
-            &      &      &      &      &      &      &      &      &      &      & x    &      \\ \hline
-            \hiderowcolors Comparação dos geradores de acordo com as métricas
-            &      &      &      &      &      &      &      &      &      &      & x    &      \\ \hline
+            \multicolumn{12}{|c|}{\textbf{Meses}} \\ \hhline{|~|*{12}{-|}}
+            & \textbf{Jan.} & \textbf{Fev.} & \textbf{Mar.} & \textbf{Abr.} & \textbf{Mai.} & \textbf{Jun.} & \textbf{Jul.} & \textbf{Ago.} & \textbf{Set.} & \textbf{Out.} & \textbf{Nov.} & \textbf{Dez.} \\ \hline
+            \hiderowcolors Atividade 1
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 2
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 3
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 4
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 5
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 6
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 7
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 8
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Atividade 9
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
             \hiderowcolors Entrega do relatório de TCC I
-            &      &      &      &      & o    &      &      &      &      &      &      &      \\ \hline
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
             \hiderowcolors Entrega do rascunho da monografia
-            &      &      &      &      &      &      &      &      &      &      & o    &      \\ \hline
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
             \hiderowcolors Defesa do TCC
-            &      &      &      &      &      &      &      &      &      &      &      & o    \\ \hline
+            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
         \end{tabular}
-        \footnotetext{Por técnicas entende-se aquelas já disponíveis na
-        infraestrutura do laboratório e outras que se apresentem implementação
-        em domínio público}
 }
-
-\textit{* Por técnicas entende-se aquelas já disponíveis na
-infraestrutura do laboratório e outras que apresentem implementação em
-domínio público}
-
 
 \chapter{Custos}
 
 \vspace{-.1cm}
-\begin{tabular}{|X p{3cm}|c|c|c|}
+\noindent\resizebox{\textwidth}{!}{
+\begin{tabular}{|m{7.25cm}|>{\centering}m{1.5cm}|>{\centering}m{1.25cm}|>{\centering}m{1.25cm}|}
     \hline
-    {\shadecell} Item & {\shadecell} Quant. & {\shadecell} Valor Un. (R\$) & {\shadecell} Total (R\$) \\ \hline
-    \hline
-    \multicolumn{4}{|c|}{Material de Consumo} \\ \hline
-    CD & 6 & $1,50$ & $9,00$ \\ \hline
-    Folhas Impressas & 500 & $0,20$ & $100,00$ \\ \hline
+    {\shadecell} \centering \textbf{Item} & {\shadecell} \textbf{Quantidade} & {\shadecell} \textbf{Valor unitário (R\$)} & {\shadecell} \textbf{Total (R\$)}
+    \tabularnewline \hline
+    \multicolumn{4}{|l|}{{\shadecell}\textbf{Material permanente}}
+    \tabularnewline \hline
+    (p.ex. computadores, equipamentos, componentes de hardware, livros, etc.) &    &  &  
+    \tabularnewline \hline
+    \multicolumn{4}{|l|}{{\shadecell}\textbf{Material de consumo}}
+    \tabularnewline \hline
+    CD               & 6   & $1,50$ & $9,00$
+    \tabularnewline \hline
+    Folhas Impressas & 500 & $0,20$ & $100,00$
+    \tabularnewline \hline
+    \multicolumn{4}{|l|}{{\shadecell}\textbf{Outros recursos e serviços}}
+    \tabularnewline \hline
+    (p.ex. licenças de uso de software, fotocópias, transporte, viagens, treinamentos, etc.) & & & 
+    \tabularnewline \hline
+    \textbf{Total} & & & 
+    \tabularnewline \hline
 \end{tabular}
-
+}
 
 \chapter{Recursos Humanos}
 
+\noindent\resizebox{\textwidth}{!}{
 \begin{tabular}{|l|l|}
-    \arrayrulecolor{white}
-    \hline
-    \arrayrulecolor{black}
     \hline
     \rowcolor{shadecolor}
-    Nome & Função \\ \hline
-    \imprimirautor & Autor \\ \hline
-    \imprimirorientador & Orientador/Professor Responsável \\ \hline
-    Gabriel Arthur Gerber Andrade & \todo{Ver função adequada} \\ \hline
-    Marleson Graf & \todo{Ver função adequada} \\ \hline
-    % \bancaMembroA{} & Membro da Banca \\ \hline
-    % \bancaMembroB{} & Membro da Banca \\ \hline
-    Renato Cislaghi & Coordenador de Projetos \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Nome}} &  \multicolumn{1}{|c|}{\textbf{Função}} \\ \hline
+    \imprimirautor                   & Autor \\ \hline
+    \imprimirorientador              & Orientador \\ \hline
+    \imprimirorientador              & Professor Responsável \\ \hline    
+    % \bancaMembroA{}                & Membro da Banca \\ \hline
+    % \bancaMembroB{}                & Membro da Banca \\ \hline
+    Renato Cislaghi                  & Coordenador de Projetos \\ \hline
 \end{tabular}
-
+}
 
 \chapter{Comunicação}
 
 \noindent\resizebox{\textwidth}{!}{
-    \begin{tabular}{|X p{3cm}|X p{3cm}|X p{3cm}|X p{3cm}|X p{3cm}|}
+    \begin{tabular}{|>{\centering}m{3cm}|>{\centering}m{3cm}|>{\centering}m{3cm}|>{\centering}m{3cm}|>{\centering}m{3cm}|}
         \hhline{|*{5}{-|}}
-        {\shadecell} O que precisa ser comunicado & {\shadecell} Por quem & {\shadecell} Para quem & {\shadecell} Melhor forma de Comunicação & {\shadecell} Quando e com que frequência \\ \hhline{|*{5}{-|}}
+        {\shadecell} \textbf{O que precisa ser comunicado} & {\shadecell} \textbf{Por quem} & {\shadecell} \textbf{Para quem} & {\shadecell} \textbf{Melhor forma de Comunicação} & {\shadecell} \textbf{Quando e com que frequência} \tabularnewline \hhline{|*{5}{-|}}
         
-        Entregas & Autor & Coordenador de Projetos & Site do TCC & Nos dias estipulados pelas disciplinas\\ \hhline{|*{5}{-|}}
+        Entregas & Autor & Coordenador de Projetos & Site do TCC & Nos dias estipulados pelas disciplinas \tabularnewline \hhline{|*{5}{-|}}
         
-        Reuniões com o orientador & Autor & Orientador & Presencial & Quinzenalmente \\ \hhline{|*{5}{-|}}
+        Reuniões com o orientador & Autor & Orientador & Presencial & Quinzenalmente \tabularnewline \hhline{|*{5}{-|}}
         
-        Revisões da monografia & Autor & Orientador, membros da banca & Papel impresso ou pdf & Período de elaboração da monografia\\ \hhline{|*{5}{-|}}
+        Revisões da monografia & Autor & Orientador, membros da banca & Papel impresso ou pdf & Período de elaboração da monografia \tabularnewline \hhline{|*{5}{-|}}
         
-        Dúvidas & Autor & Orientador, Membros da Banca ou Coordenador de Projetos & E-mail e/ou presencial & Quando necessário\\ \hhline{|*{5}{-|}}
+        Dúvidas & Autor & Orientador, Membros da Banca ou Coordenador de Projetos & E-mail e/ou presencial & Quando necessário \tabularnewline \hhline{|*{5}{-|}}
     \end{tabular}
 }
 
 \chapter{Riscos}
 
 \noindent\resizebox{\textwidth}{!}{
-    \begin{tabular}{|X p{2cm}|c|c|c|X p{3cm}|X p{3cm}|}
+    \begin{tabular}{|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{3cm}|m{3cm}|}
         \hhline{|*{6}{-|}}
-        {\shadecell} Risco & {\shadecell}Probabilidade & {\shadecell}Impacto & {\shadecell}Prioridade & {\shadecell}Estratégia de Resposta & {\shadecell}Ações Preventivas \\ \hhline{|*{6}{-|}}
-        Perda de dados (HD) & Média & Alto & Alta & Recuperação dos dados e aquisição de novo HD. & Versionar desenvolvimento remotamente. Gerar backups periodicamente. \\ \hhline{|*{6}{-|}}
-        Alteração no tema & Baixa & Alto & Alta & Modificar o escopo do tema ou adotar um novo tema. & Manter interação constante com orientador. \\ \hhline{|*{6}{-|}}
-        Alteração no cronograma & Baixa & Alto & Média & Diminuir o escopo do trabalho. & Monitorar continuamente as informações obtidas dos superiores imediatos. \\ \hhline{|*{6}{-|}}
-        Problemas de saúde & Baixa & Média & Média & Realizar tratamento e retomar as atividades o quanto antes. & Ter hábitos saudáveis e ser precavido. \\ \hhline{|*{6}{-|}}
+        \multicolumn{1}{|c|}{{\shadecell}\textbf{Risco}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Probabilidade}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Impacto}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Prioridade}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Estratégia de Resposta}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Ações Preventivas}} \tabularnewline \hhline{|*{6}{-|}}
+        Perda de dados (HD) & Média & Alto & Alta & Recuperação dos dados e aquisição de novo HD. & Versionar desenvolvimento remotamente. Gerar backups periodicamente. \tabularnewline \hhline{|*{6}{-|}}
+        Alteração no tema & Baixa & Alto & Alta & Modificar o escopo do tema ou adotar um novo tema. & Manter interação constante com orientador. \tabularnewline \hhline{|*{6}{-|}}
+        Alteração no cronograma & Baixa & Alto & Média & Diminuir o escopo do trabalho. & Monitorar continuamente as informações obtidas dos superiores imediatos. \tabularnewline \hhline{|*{6}{-|}}
+        Problemas de saúde & Baixa & Média & Média & Realizar tratamento e retomar as atividades o quanto antes. & Ter hábitos saudáveis e ser precavido. \tabularnewline \hhline{|*{6}{-|}}
     \end{tabular}
 }
 
