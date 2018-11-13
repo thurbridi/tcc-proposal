@@ -39,7 +39,7 @@
 \preambulo{Trabalho de Conclusão de Curso submetido ao Curso de Bacharelado em
            Ciências da Computação para a obtenção do Grau de Bacharel
            em Ciências da Computação.}
-\assuntos{Ciências da Computação,Modelos,Teses,OpenSource,LaTeX}
+\assuntos{atributos sísmicos, fácies sísmicas, algoritmos genéticos, redes de Kohonen, self-organizing maps}
 
 \renewcommand{\imprimircapa}{%
     \begin{capa}%
@@ -150,7 +150,7 @@
 
 %--------------------------------------------------------------------------
 \begin{resumo}
-    % TODO: Resumo
+    Assim como outros mercados, a indústria de petróleo e gás se beneficiou do aumento de dados disponíveis para análise, principalmente através da sísmica 3D e atributos sísmicos. Um dos desafios atuais é a seleção de atributos sísmicos para classificação de fácies, devido ao grande volume de dados e redundância de informações, e que ainda é feita por análise humana. Portanto, faz-se necessário o desenvolvimento de métodos computacionais para realizar a seleção dos atributos sísmicos mais relevantes para uma posterior análise das fácies. Este trabalho propõe, através de um conjunto de dados como caso de estudo, desenvolver tal método de seleção de atributos, e validar sua utilidade, através de algoritmos genéticos para otimização e redes de Kohonen para classificação de fácies. A avaliação do método desenvolvido será feita através de comparações qualitativas com os métodos de seleção utilizados atualmente. 
 
     \vspace{\onelineskip}
     \noindent
@@ -167,20 +167,26 @@
 \chapter{Introdução}
 A caracterização de reservatórios de petróleo e gás se beneficiou de avanços tecnológicos como a sísmica 3D e atributos sísmicos, que fornecem informações qualitativas da geometria e dos parâmetros físicos da subsuperfície  \cite{Sancevero:2007}. Essas tecnologias deram origem  ao desafio de análise dessa grande quantidade de dados disponíveis aos intérpretes. 
 
-No processo de análise de fácies sísmicas, a abordagem não supervisionada utiliza atributos sísmicos como entrada de um algoritmo de clusterização. Nesse contexto, o algoritmo de redes de Kohonen, ou \textit{Self Organizing Maps}, (SOM) teve melhores resultados \cite{Coleou:2003} e atualmente é utilizado em \textit{softwares} comerciais. Entretanto, resultados úteis dependem mais dos atributos selecionados do que o método de clusterização utilizado \cite{Barnes:2002}. A seleção de um bom conjunto de atributos dentre a centenas disponíveis representa um problema em questão de tamanho e dimensionalidade dos dados. Além disso, nem todo atributo é relevante para a análise e muitos deles contém informações redundantes \cite{Barnes:2007}.
+No processo de análise de fácies sísmicas, a abordagem não supervisionada utiliza atributos sísmicos como entrada de um algoritmo de clusterização. Nesse contexto, o algoritmo de redes de Kohonen, ou \textit{Self Organizing Maps} (SOM), teve melhores resultados \cite{Coleou:2003} e atualmente é utilizado em aplicações comerciais. Entretanto, resultados úteis dependem mais dos atributos selecionados do que o método de clusterização utilizado \cite{Barnes:2002}. A seleção de um bom conjunto de atributos dentre a centenas disponíveis representa um problema em questão de tamanho e dimensionalidade dos dados. Além disso, nem todo atributo é relevante para a análise e muitos deles contém informações redundantes \cite{Barnes:2007}.
 
-Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar automaticamente um subconjunto de atributos sísmicos relevantes para a classificação de fácies sísmicas. No contexto de previsão de \textit{logs} de poços, que possui o mesmo desafio de seleção de atributos, uma abordagem utilizando algoritmos genéticos e redes neurais apresentou bons resultados \cite{Dorrington:2004}. 
+Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar automaticamente um subconjunto de atributos sísmicos relevantes para a classificação de fácies sísmicas. No contexto de previsão de \textit{logs} de poços, que possui o mesmo desafio de seleção de atributos, uma abordagem utilizando algoritmos genéticos e redes neurais apresentou bons resultados \cite{Dorrington:2004}. Este trabalho propõe a elaboração de um método computacional para seleção de atributos sísmicos utilizando algoritmos genéticos, redes de Kohonen e dados de poços sintéticos.
 
 %--------------------------------------------------------------------------
 \chapter{Objetivos}
 
 \section{Objetivo Geral}
+Elaborar e implementar um método para seleção automática de atributos sísmicos, através de algoritmos genéticos, para serem usados como entrada de um algoritmo de classificação de fácies sísmicas. Visando a aceleração e aumento da acurácia no processo de caracterização de reservatórios de petróleo e gás.
 
 \section{Objetivos Específicos}
-
+\begin{itemize}
+    \item \textbf{Realizar a seleção automática de atributos sísmicos:} aplicando o método proposto deve-se obter um conjunto de atributos sísmicos que melhor descrevam o cenário geológico em análise.
+    
+    \item \textbf{Validar a utilidade dos atributos selecionados:} os atributos escolhidos pelo método devem ser relevantes para a análise da geologia no contexto da caracterização de reservatórios. Essa validação pode ser feita utilizando conjuntos de dados sintéticos ou dados de reservatórios já explorados.
+\end{itemize}
 
 %--------------------------------------------------------------------------
 \chapter{Método de Pesquisa}
+Será escolhido um conjunto de dados como caso de estudo (campo já explorado ou dados sintéticos). A partir desses dados será realizada a modelagem de poços sintéticos, ou pseudo-poços. Com os atributos selecionados pelo método proposto, será feita a classificação de fácies sísmicas. O resultado será comparado qualitativamente com escolhas de atributos indicadas por trabalhos relacionados na literatura.
 
 %--------------------------------------------------------------------------
 \chapter{Cronograma}
@@ -192,32 +198,24 @@ Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar aut
         \hline
             \multirow{-1}{*}{\textbf{Etapas}} &
     
-            \multicolumn{12}{|c|}{\textbf{Meses}} \\ \hhline{|~|*{12}{-|}}
+            \multicolumn{12}{|c|}{\textbf{2019}} \\ \hhline{|~|*{12}{-|}}
             & \textbf{Jan.} & \textbf{Fev.} & \textbf{Mar.} & \textbf{Abr.} & \textbf{Mai.} & \textbf{Jun.} & \textbf{Jul.} & \textbf{Ago.} & \textbf{Set.} & \textbf{Out.} & \textbf{Nov.} & \textbf{Dez.} \\ \hline
-            \hiderowcolors Atividade 1
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 2
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 3
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 4
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 5
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 6
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 7
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 8
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
-            \hiderowcolors Atividade 9
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Estudar a fundamentação teórica
+            & {\shadecell}x & {\shadecell}x &      &      &      &      &      &      &      &      &      &      \\ \hline
+            \hiderowcolors Desenvolver a solução
+            &      &   {\shadecell}x   &  {\shadecell}x    &   {\shadecell}x   &   {\shadecell}x   &  {\shadecell}x     &      &      &      &      &      &      \\ \hline
             \hiderowcolors Entrega do relatório de TCC I
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            &      &      &      &      &      & {\shadecell}x &      &      &      &      &      &      \\ \hline            
+            \hiderowcolors Analisar os resultados
+            &      &      &      &      &     &  {\shadecell}x    &    {\shadecell}x  &   {\shadecell}x    &      &      &      &      \\ \hline
+            \hiderowcolors Escrever, formatar e revisar a monografia
+            &      &      &      &      &      &      &      &    {\shadecell}x    &    {\shadecell}x  &     {\shadecell}x &      &      \\ \hline
             \hiderowcolors Entrega do rascunho da monografia
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            &      &      &      &      &      &      &      &      &      &   {\shadecell}x&      &      \\ \hline
+            \hiderowcolors Preparação para a defesa do TCC
+            &      &      &      &      &      &   &      &      &      &   {\shadecell}x   &    {\shadecell}x  &      \\ \hline            
             \hiderowcolors Defesa do TCC
-            &      &      &      &      &      &      &      &      &      &      &      &      \\ \hline
+            &      &      &      &      &      &      &      &      &      &      & {\shadecell}x&      \\ \hline
         \end{tabular}
 }
 
@@ -229,21 +227,13 @@ Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar aut
     \hline
     {\shadecell} \centering \textbf{Item} & {\shadecell} \textbf{Quantidade} & {\shadecell} \textbf{Valor unitário (R\$)} & {\shadecell} \textbf{Total (R\$)}
     \tabularnewline \hline
-    \multicolumn{4}{|l|}{{\shadecell}\textbf{Material permanente}}
-    \tabularnewline \hline
-    (p.ex. computadores, equipamentos, componentes de hardware, livros, etc.) &    &  &  
-    \tabularnewline \hline
     \multicolumn{4}{|l|}{{\shadecell}\textbf{Material de consumo}}
     \tabularnewline \hline
     CD               & 6   & $1,50$ & $9,00$
     \tabularnewline \hline
-    Folhas Impressas & 500 & $0,20$ & $100,00$
+    Folhas Impressas & 500 & $0,25$ & $125,00$
     \tabularnewline \hline
-    \multicolumn{4}{|l|}{{\shadecell}\textbf{Outros recursos e serviços}}
-    \tabularnewline \hline
-    (p.ex. licenças de uso de software, fotocópias, transporte, viagens, treinamentos, etc.) & & & 
-    \tabularnewline \hline
-    \textbf{Total} & & & 
+    \multicolumn{3}{|l|}{\textbf{Total}} & $134,00$
     \tabularnewline \hline
 \end{tabular}
 }
@@ -271,13 +261,17 @@ Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar aut
         \hhline{|*{5}{-|}}
         {\shadecell} \textbf{O que precisa ser comunicado} & {\shadecell} \textbf{Por quem} & {\shadecell} \textbf{Para quem} & {\shadecell} \textbf{Melhor forma de Comunicação} & {\shadecell} \textbf{Quando e com que frequência} \tabularnewline \hhline{|*{5}{-|}}
         
-        Entregas & Autor & Coordenador de Projetos & Site do TCC & Nos dias estipulados pelas disciplinas \tabularnewline \hhline{|*{5}{-|}}
+        Entregas & Autor & Coordenador de Projetos & Sistema de Gestão de TCCs INE & Nas datas estipuladas pelas disciplinas TCC I e II \tabularnewline \hhline{|*{5}{-|}}
         
-        Reuniões com o orientador & Autor & Orientador & Presencial & Quinzenalmente \tabularnewline \hhline{|*{5}{-|}}
+        Reuniões com o orientador & Autor & Orientador & Presencial (preferencialmente) ou videoconferência & Semanalmente \tabularnewline \hhline{|*{5}{-|}}
         
-        Revisões da monografia & Autor & Orientador, membros da banca & Papel impresso ou pdf & Período de elaboração da monografia \tabularnewline \hhline{|*{5}{-|}}
+        Revisões da monografia & Autor & Orientador & Folha impressa ou documento pdf & Período de elaboração da monografia \tabularnewline \hhline{|*{5}{-|}}
         
-        Dúvidas & Autor & Orientador, Membros da Banca ou Coordenador de Projetos & E-mail e/ou presencial & Quando necessário \tabularnewline \hhline{|*{5}{-|}}
+        Dúvidas & Autor & Orientador, Membros da Banca ou Coordenador de Projetos & E-mail & Quando necessário \tabularnewline \hhline{|*{5}{-|}}
+        
+        Horário e local da defesa & Autor & Membros da Banca & E-mail & Assim que as informações da defesa estiverem definidas \tabularnewline \hhline{|*{5}{-|}}
+        
+        Avaliação do TCC & Membros da banca & Coordenador de Projetos & Sistema de Gestão de TCCs INE & Após a defesa do TCC \tabularnewline \hhline{|*{5}{-|}}        
     \end{tabular}
 }
 
@@ -287,10 +281,9 @@ Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar aut
     \begin{tabular}{|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{3cm}|m{3cm}|}
         \hhline{|*{6}{-|}}
         \multicolumn{1}{|c|}{{\shadecell}\textbf{Risco}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Probabilidade}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Impacto}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Prioridade}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Estratégia de Resposta}} & \multicolumn{1}{|c|}{{\shadecell}\textbf{Ações Preventivas}} \tabularnewline \hhline{|*{6}{-|}}
-        Perda de dados (HD) & Média & Alto & Alta & Recuperação dos dados e aquisição de novo HD. & Versionar desenvolvimento remotamente. Gerar backups periodicamente. \tabularnewline \hhline{|*{6}{-|}}
-        Alteração no tema & Baixa & Alto & Alta & Modificar o escopo do tema ou adotar um novo tema. & Manter interação constante com orientador. \tabularnewline \hhline{|*{6}{-|}}
-        Alteração no cronograma & Baixa & Alto & Média & Diminuir o escopo do trabalho. & Monitorar continuamente as informações obtidas dos superiores imediatos. \tabularnewline \hhline{|*{6}{-|}}
-        Problemas de saúde & Baixa & Média & Média & Realizar tratamento e retomar as atividades o quanto antes. & Ter hábitos saudáveis e ser precavido. \tabularnewline \hhline{|*{6}{-|}}
+        Perda de dados (HDD ou SSD) & Média & Alto & Alta & Recuperação dos dados e aquisição de novo dispositivo de armazenamento. & Versionar desenvolvimento na nuvem e gerar backups periodicamente. \tabularnewline \hhline{|*{6}{-|}}
+        Alteração no escopo & Média & Alto & Alta & Realizar reajustes no planejamento do trabalho. & Manter comunicação constante, aberta e clara com o orientador. \tabularnewline \hhline{|*{6}{-|}}
+        Problemas de saúde & Baixa & Média & Média & Realizar tratamento médico. & Rotina de exercícios, alimentação balanceada, vacinação. \tabularnewline \hhline{|*{6}{-|}}
     \end{tabular}
 }
 
@@ -323,12 +316,12 @@ Desse modo, faz-se necessário o desenvolvimento de métodos para selecionar aut
     \noindent\resizebox{\textwidth}{!}{
         \begin{tabular}{|l|X p{8cm}|}
             \hline
-            \textbf{Instituição} & ECL/INE/CTC \\ \hline
+            \textbf{Instituição} & L3C/INE/CTC \\ \hline
             \textbf{Nome do Responsável} & \imprimirorientador \\ \hline
             \textbf{Cargo/Função} & Prof. INE/CTC \\ \hline
             \textbf{Fone de Contato} & (48) 3721 7549\\ \hline
             \textbf{Acadêmico} & \imprimirautor \\ \hline
-            \textbf{Título do trabalho} & Verificação pré-silício de memória baseada em testes dirigidos adaptativos\\ \hline
+            \textbf{Título do trabalho} & \imprimirtitulo \\ \hline
             \textbf{Curso} & Ciências da Computação/INE/UFSC \\ \hline
         \end{tabular}
     }
